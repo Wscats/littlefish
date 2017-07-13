@@ -1,0 +1,33 @@
+<div class="weui-tab">
+	<div class="weui-tab__panel">
+
+	</div>
+	<div class="weui-tabbar">
+		<a href="#!/index/home" class="weui-tabbar__item" ng-class="{'weui-bar__item_on':tab==0}" ng-click="changeTab(0)">
+			<img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+			<p class="weui-tabbar__label">姚</p>
+		</a>
+		<a href="#!/index/contacts" class="weui-tabbar__item" ng-class="{'weui-bar__item_on':tab==1}" ng-click="changeTab(1)">
+			<img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+			<p class="weui-tabbar__label">李</p>
+		</a>
+		<a href="javascript:;" class="weui-tabbar__item">
+			<img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+			<p class="weui-tabbar__label">陈</p>
+		</a>
+		<a href="javascript:;" class="weui-tabbar__item">
+			<img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+			<p class="weui-tabbar__label">洪</p>
+		</a>
+	</div>
+</div>
+<style>
+	.weui-tab{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+		height: 50px;
+	}
+</style>

@@ -1,0 +1,33 @@
+<div class="weui-panel weui-panel_access">
+	<div class="weui-panel__hd" ng-click="changeActionSheet()">点击我，无意思</div>
+	<div class="weui-panel__bd">
+		<a href="javascript:void(0);" ng-repeat="n in news|filter:{'title':searchTitle}" class="weui-media-box weui-media-box_appmsg">
+			<div class="weui-media-box__hd">
+				<img ng-click="changeGallery(n.avatar_url)" class="weui-media-box__thumb" ng-src="{{n.avatar_url}}" alt="">
+			</div>
+			<div ng-click="goToDetail(n.id)" class="weui-media-box__bd">
+				<h4 class="weui-media-box__title">{{n.title}}</h4>
+				<!--<p class="weui-media-box__desc" ng-bind-html="n.content|html"></p>-->
+				<p class="weui-media-box__desc"><span>来自于：{{n.loginname}}</span><!-- <span>发布于：{{n.create_at|limitTo:5:5}}</span>--></p>
+			</div>
+		</a>
+	</div>
+	<div class="weui-panel__ft" ng-hide="isLoadMore">
+		<a href="javascript:void(0);" ng-click="loadMore()" class="weui-cell weui-cell_access weui-cell_link">
+			<div class="weui-cell__bd">查看更多</div>
+			<span class="weui-cell__ft"></span>
+		</a>
+	</div>
+	<div class="weui-loadmore" ng-show="isLoadMore">
+		<i class="weui-loading"></i>
+		<span class="weui-loadmore__tips">正在加载</span>
+	</div>
+</div>
+<style>
+	.weui-panel__ft {
+		margin-bottom: 50px;
+	}
+	.weui-loadmore {
+		margin-bottom: 70px;
+	}
+</style>
