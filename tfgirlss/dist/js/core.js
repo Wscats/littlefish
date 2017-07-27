@@ -1,0 +1,1 @@
+angular.module("newsApp",["ui.router","routes"]),angular.module("routes",[]).config(["$stateProvider","$urlRouterProvider",function(e,r){e.state("index",{url:"/index",templateUrl:"template/index.html"})}]),angular.module("services",[]).service("tool",[function(){return{}}]),angular.bootstrap(document.body,["newsApp"]);
