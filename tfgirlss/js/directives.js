@@ -130,4 +130,14 @@
 			}
 		}
 	}])
+	directives.directive("xback", ["$window",function($window) {
+		return {
+			templateUrl: "directive/xback.html",
+			link: function(scope, ele, attr) {
+				scope.back = function(){
+					$window.history.go(-1)
+				}
+			}
+		}
+	}])
 })();
