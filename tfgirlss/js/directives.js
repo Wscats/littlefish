@@ -29,8 +29,16 @@
 				//scope.imgs = ["images/1.jpg"];
 				var swiper = new Swiper('.swiper-container', {
 					pagination: '.swiper-pagination',
-					paginationClickable: true
+					paginationClickable: true,
+					autoplay : 5000,
+					observer: true, //修改swiper自己或子元素时，自动初始化swiper 
+                    observeParents: true, //修改swiper的父元素时，自动初始化swiper 
+ 
+					
 				});
+				
+				
+				
 				//scope.isLoadMore++;
 				$timeout(function() {}, 1000)
 				$http({
@@ -41,6 +49,8 @@
 					scope.imgs = data.data.imgs
 					//scope.isLoadMore--;
 				})
+				
+
 			}
 		}
 	}])
